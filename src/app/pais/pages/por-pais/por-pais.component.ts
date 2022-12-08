@@ -63,13 +63,10 @@ export class PorPaisComponent {
     params.set('nombreNota', this.form.nombreNota);
     params.set('valorNota', this.form.valorNota); 
 
-    const options = { headers: new HttpHeaders({
-      'Content-type': 'application/x-www-form-urlencoded',
-      'Access-Control-Allow-Origin:':'*'
-    })};
+
 
     // Simple POST request with a JSON body and response type <any>
-    this.http.post<ICalificacionResp[]>('http://44.193.39.14:8000/api/calificaciones', calificacion,options) 
+    this.http.post<ICalificacionResp[]>('http://44.193.39.14:8000/api/calificaciones', calificacion) 
     .subscribe(data => {
       debugger;
       const result:ICalificacionResp[] = data;
