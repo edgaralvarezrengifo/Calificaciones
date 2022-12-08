@@ -1,0 +1,35 @@
+<div class="animate__animated animate__bounce">
+    <h2>Registro Calificación</h2>
+    <hr>
+
+    <form (ngSubmit)="registrarCalificacion()">
+            <input name="nombreEstudiante" placeholder ="Nombre Estudiante" type="text" [(ngModel)]="form.nombreEstudiante" required title="nombreEstudiante" /><br><br>
+            <input name="apellidoEstudiante" placeholder="Apellido Estudiante" type="text" [(ngModel)]="form.apellidoEstudiante" required title="apellidoEstudiante" /><br><br>
+            <input name="nombreMateria" placeholder="Nombre Materia" type="text" [(ngModel)]="form.nombreMateria" required title="nombreMateria" /><br><br>
+            <input name="nombreNota" placeholder="Nombre Nota" type="text" [(ngModel)]="form.nombreNota" required title="nombreNota" /><br><br>
+            <input name="valorNota" placeholder="Valor Nota" type="text" [(ngModel)]="form.valorNota" required title="valorNota" /><br><br>
+            <button type="submit">Grabar</button>
+    </form>
+</div>
+<br><br>
+<div>
+    <h2>Listado de Calificaciones Registradas</h2>
+    <hr>
+    <table>
+        <tr>
+            <th>Indice</th>
+            <th>Nombre Nota</th>
+            <th>Valor Nota</th>
+        </tr>
+        <tr *ngFor="let str of calificaciones; index as i">
+            <td>{{i}}</td>
+            <td>{{str.NombreNota}}</td>
+            <td>{{str.Valor}}</td>
+        </tr> 
+    </table>
+</div>
+
+
+<div *ngIf="hayError" class="alert alert-danger">
+    {{mensajeError}}
+</div>
