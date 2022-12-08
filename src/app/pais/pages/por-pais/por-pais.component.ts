@@ -64,8 +64,9 @@ export class PorPaisComponent {
     params.set('valorNota', this.form.valorNota); 
 
     const options = { headers: new HttpHeaders({
-      'Content-type': 'application/x-www-form-urlencoded',
-      'Access-Control-Allow-Origin':'*'
+      'Access-Control-Allow-Origin':'*',
+      'Content-Type': 'application/json',
+      
     })};
 
     // Simple POST request with a JSON body and response type <any>
