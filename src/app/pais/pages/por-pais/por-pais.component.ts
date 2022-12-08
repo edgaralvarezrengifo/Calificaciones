@@ -64,7 +64,7 @@ export class PorPaisComponent {
     params.set('valorNota', this.form.valorNota);
 
     // Simple POST request with a JSON body and response type <any>
-    this.http.post<ICalificacionResp[]>('http://localhost/api/calificaciones', calificacion) 
+    this.http.post<ICalificacionResp[]>('http:// 10.0.14.170/api/calificaciones', calificacion) 
     .subscribe(data => {
       debugger;
       const result:ICalificacionResp[] = data;
