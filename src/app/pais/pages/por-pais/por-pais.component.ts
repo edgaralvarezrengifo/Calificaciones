@@ -70,7 +70,7 @@ export class PorPaisComponent {
     })};
 
     // Simple POST request with a JSON body and response type <any>
-    this.http.post<ICalificacionResp[]>('http://44.193.39.14:8000/api/calificaciones', calificacion,options) 
+    this.http.post<ICalificacionResp[]>('http://3.232.134.75:8000/api/calificaciones', calificacion,options) 
     .subscribe(data => {
       debugger;
       const result:ICalificacionResp[] = data;
